@@ -22,48 +22,48 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Learn More",
+    href: "https://michalgnieciak.github.io/about/",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Learn more about the colors website and other interesting facts about colors!",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "See Templates",
+    href: "https://ui.shadcn.com/docs",
     description:
-      "For sighted users to preview content available behind a link.",
+      "You can learn more about the templates used by visitng the source website.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Colors",
+    href: "https://coolors.co/",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "If you want to know how the palette for this website was chosen visit this link.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Github",
+    href: "https://github.com/MichalGnieciak/www4lab",
+    description: "If you'd like to see the results code you can visit the github repository for this website.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "Content",
+    href: "https://michalgnieciak.github.io/www2lab/",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "The content fot this webpage was taken from another project which you can visit by this link.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "Author",
+    href: "https://github.com/MichalGnieciak",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "If you want to see more of my work you can visit my github profile.",
   },
 ]
 
 export default function NavigationMenuDemo() {
   return (
-    <NavigationMenu className="justify-center flex-row">
-        <NavigationMenuItem className="mr-auto">
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+    <NavigationMenu className="justify-end flex-row">
+        <NavigationMenuItem className="mr-auto list-none mt-1 md-1">
+          <Link href="https://michalgnieciak.github.io/" legacyBehavior passHref>
+            <NavigationMenuLink>
                 <Avatar>
                     <AvatarImage src="/assets/color-wheel.png" />
                 </Avatar>
@@ -72,7 +72,7 @@ export default function NavigationMenuDemo() {
       </NavigationMenuItem>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-center bg-[#E3CAA5 text-l font-bold text-[#FFFBE9]" style={{ textShadow: "2px 2px 5px #AD8B73" }}>Home</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -82,29 +82,28 @@ export default function NavigationMenuDemo() {
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
+                      Michal Gnieciak
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
+                      This website was designed and written by me.
                     </p>
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
+              <ListItem href="/docs" title="How it started">
+               This webpage was designed with tailwind css and shadcn components.
               </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
+              <ListItem href="/docs/installation" title="How it's going">
+                Currently this webpage is being develop to mimic the previous lab2 webpage.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem href="/docs/primitives/typography" title="How it will be going">
+                This website and other templates could get used to create an impressive portfolio.
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-center text-l font-bold text-[#FFFBE9]" style={{ textShadow: "2px 2px 5px #AD8B73" }}>Info</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
@@ -120,9 +119,9 @@ export default function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
+          <Link href="https://github.com/MichalGnieciak?tab=repositories" legacyBehavior passHref>
+            <NavigationMenuLink className="text-center text-l font-bold text-[#FFFBE9]" style={{ textShadow: "2px 2px 5px #AD8B73" }}>
+              See more
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

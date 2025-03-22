@@ -14,46 +14,40 @@ import {
 // Menu items.
 const items = [
   {
-    title: "Home",
-    url: "#",
-    icon: Home,
+    title: "Blue",
+    url: "https://michalgnieciak.github.io/posts/Learn-about-blue/",
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    title: "Red",
+    url: "https://michalgnieciak.github.io/posts/Learn-about-red/",
   },
   {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
+    title: "Green",
+    url: "https://michalgnieciak.github.io/posts/Learn-about-green/",
   },
   {
-    title: "Search",
-    url: "#",
-    icon: Search,
+    title: "Purple",
+    url: "https://michalgnieciak.github.io/posts/Learn-about-purple/",
   },
   {
-    title: "Settings",
-    url: "#",
-    icon: Settings,
+    title: "Black",
+    url: "https://michalgnieciak.github.io/posts/Learn-about-black/",
   },
 ]
 
 export default function AppSidebar() {
   return (
     <Sidebar>
-      <SidebarContent>
+      <SidebarContent className="bg-[#CEAB93]">
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
-          <SidebarGroupContent>
+          <SidebarGroupLabel className="text-center bg-[#CEAB93] text-4xl font-bold text-[#FFFBE9]" style={{ textShadow: "2px 2px 5px #AD8B73" }}>Colors list</SidebarGroupLabel>
+          <SidebarGroupContent className="bg-[#CEAB93]">
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild >
                     <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
+                      <span className="text-center bg-[#E3CAA5 text-xl font-bold text-[#FFFBE9]" style={{ textShadow: "2px 2px 5px #AD8B73" }}>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
